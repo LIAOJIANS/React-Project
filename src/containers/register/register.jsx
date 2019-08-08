@@ -2,6 +2,8 @@
 *  注册路由组件
 * */
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import {
     Button,
     InputItem,
@@ -11,32 +13,45 @@ import {
     WingBlank,
     NavBar
 } from 'antd-mobile'
+import { register } from '../../redux/actions'
 import Logo from '../../components/logo/logo'
 const ListItem = List.Item
 
-export default class Register extends Component {
+
+class Register extends Component {
     state = {
-        type: 'dashen'
+        type: 'dashen',
+        msg: ""
     }
     regist = () => {
         // 1、 获取文本框的信息
-        const userName = this.userName.state.value.trim()
+        const username = this.userName.state.value.trim()
         const password = this.password.state.value.trim()
         const otherPassWord = this.otherPassWord.state.value.trim()
         const { type } = this.state
         // 2、进行合法性的校验
-        if (!userName) {
-            console.log('用户名没有输入')
+        if (!username) {
+            console.log(1)
+            this.setState({
+                msg: "请指定用户名"
+            })
             return;
         } else if ( !password ) {
-            console.log('密码没有输入')
+            this.setState({
+                msg: "密码没有输入"
+            })
             return;
         } else if ( !otherPassWord || password !== otherPassWord) {
-            console.log('两次输入的密码不相等')
+            this.setState({
+                msg: '两次输入的密码不相等'
+            })
             return;
         } else {
+            this.setState({
+                msg: ''
+            })
             // 3、发送异步注册
-            console.log('注册成功！')
+           this.props.register({username, password, type})
         }
 
     }
@@ -49,12 +64,19 @@ export default class Register extends Component {
     }
    render() {
         const { type } = this.state
+       const { msg, redirectTo } = this.props.user
+       const showMsg = this.state.msg
+       if(redirectTo) {
+            return <Redirect to={ redirectTo } />
+       }
        return (
            <div>
                <NavBar>山&nbsp;山&nbsp;职&nbsp;聘</NavBar>
                <Logo />
                <WingBlank>
                    <List>
+                       { msg ? <div className='errorMsg'>{ msg }</div> : null }
+                       { showMsg ? <div className='errorMsg'>{ showMsg }</div> : null }
                        <WhiteSpace />
                        <InputItem ref={ userName => this.userName = userName }>用户名：</InputItem>
                        <WhiteSpace />
@@ -78,3 +100,8 @@ export default class Register extends Component {
        )
    }
 }
+
+export default connect(
+    state => ({ user: state.user }),
+    { register }
+)(Register)
