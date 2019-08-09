@@ -3,7 +3,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button, InputItem, NavBar, TextareaItem } from "antd-mobile"
+import { Redirect } from 'react-router-dom'
+
 import HeaderSelect from "../../components/header-select/header-select"
+import { updata } from '../../redux/actions'
 
 class DaShenInfo extends Component {
     state = {
@@ -20,9 +23,15 @@ class DaShenInfo extends Component {
         })
     }
     save = () => {
-        console.log(this.state)
+        const user = this.state
+        this.props.updata(user)
     }
     render() {
+        const { type, header } = this.props.user
+        if(header) {
+            const path = type === 'dashen' ? '/dashen': '/laoban'
+            return <Redirect to={ path } />
+        }
         return (
             <div>
                 <NavBar>大神信息完善</NavBar>
@@ -35,6 +44,6 @@ class DaShenInfo extends Component {
     }
 }
 export default connect(
-    state => ({}),
-    {}
+    state => ({ user: state.user }),
+    { updata }
 )(DaShenInfo)
