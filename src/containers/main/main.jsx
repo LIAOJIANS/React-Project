@@ -9,6 +9,7 @@ import Cookies from 'js-cookie'
 import DaShenInfo from '../dashen-info/dashen-info'
 import LaoBanInfo from '../laoban-info/laoban-info'
 import { getredirectTo } from '../../utils'
+import { userInfo } from '../../redux/actions'
 
  class Main extends Component {
     componentDidMount() {
@@ -16,7 +17,7 @@ import { getredirectTo } from '../../utils'
         const { _id } = this.props.user
         if(userid && !_id) {
             // 发送个人信息查询接口
-            console.log('发送获取信息接口！')
+           this.props.userInfo()
         }
     }
      render() {
@@ -49,5 +50,6 @@ import { getredirectTo } from '../../utils'
    }
 }
 export default connect(
-    state => ({ user: state.user })
+    state => ({ user: state.user }),
+    {userInfo}
 )(Main)

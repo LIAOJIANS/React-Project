@@ -7,7 +7,7 @@ import {
     AUTH_SUCCESS,
     ERROR_MSG,
     RECEIVE_USER,
-    RESET_USER
+    RESET_USER,
 } from './action-types'
 import { getredirectTo } from '../utils'
 

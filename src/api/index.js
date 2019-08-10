@@ -9,3 +9,6 @@ export const reqLogin = ({ username, password }) => ajax('login', { username, pa
 
 // 完善用户信息接口
 export const reqUpadataUser = ({ header, info, post, salary, company }) => ajax('/updata', { header, info, post, salary, company }, 'POST')
+
+// 获取个人信息接口
+export const reqUser = () => ajax('/user')
