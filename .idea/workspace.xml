@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdef6e5c-691a-4ca0-8c46-0d3e7dca0bca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/not-found/not-found.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/dashen/dashen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/laoban/laoban.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/messages/messages.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/personal/personal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav-footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/dashen-selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/dashen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/laoban-selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/laoban.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/message-selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/personal-selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/nav-footer/nav/personal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/main/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/main/main.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,14 +26,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/main/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1975">
-              <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+            <state relative-caret-position="297">
+              <caret line="80" column="34" lean-forward="true" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#19#59#0" expanded="true" />
+                <element signature="e#753#806#0" />
+                <element signature="e#913#944#0" />
+                <element signature="e#1029#1156#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/nav-footer/nav-footer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#16#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,7 +83,6 @@
         <option value="$PROJECT_DIR$/src/containers/register/register.css" />
         <option value="$PROJECT_DIR$/src/assets/index.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/assets/css/index.css" />
         <option value="$PROJECT_DIR$/src/containers/register/register.jsx" />
         <option value="$PROJECT_DIR$/src/containers/login/login.jsx" />
         <option value="$PROJECT_DIR$/src/components/header-select/header-select.jsx" />
@@ -78,13 +98,15 @@
         <option value="$PROJECT_DIR$/src/containers/messages/messages.jsx" />
         <option value="$PROJECT_DIR$/src/containers/personal/personal.jsx" />
         <option value="$PROJECT_DIR$/src/components/not-found/not-found.jsx" />
+        <option value="$PROJECT_DIR$/src/assets/css/index.css" />
         <option value="$PROJECT_DIR$/src/containers/main/main.jsx" />
+        <option value="$PROJECT_DIR$/src/components/nav-footer/nav-footer.jsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="731" />
-    <option name="y" value="17" />
+    <option name="x" value="294" />
+    <option name="y" value="419" />
     <option name="width" value="1173" />
     <option name="height" value="690" />
   </component>
@@ -130,14 +152,14 @@
               <item name="react-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="not-found" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-project" type="b2602c69:ProjectViewProjectNode" />
@@ -160,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/nav-footer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -177,6 +199,7 @@
       <recent name="C:\Users\Administrator\Desktop\React\react-project\src\assets\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\React\react-project\src\components\nav-footer" />
       <recent name="C:\Users\Administrator\Desktop\React\react-project\src\components" />
       <recent name="C:\Users\Administrator\Desktop\React\react-project\src\containers" />
       <recent name="C:\Users\Administrator\Desktop\React\react-project\src\components\header-select\images" />
@@ -219,7 +242,7 @@
       <workItem from="1565343512138" duration="12137000" />
       <workItem from="1565419391866" duration="3845000" />
       <workItem from="1565427127227" duration="1345000" />
-      <workItem from="1565500798295" duration="2065000" />
+      <workItem from="1565500798295" duration="4944000" />
     </task>
     <task id="LOCAL-00001" summary="登录注册">
       <created>1565164005474</created>
@@ -277,17 +300,24 @@
       <option name="project" value="LOCAL" />
       <updated>1565428464383</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="静态页面完成">
+      <created>1565503651818</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565503651818</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52006000" />
+    <option name="totallyTimeSpent" value="54885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14488935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -299,9 +329,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49947312" weight="0.32792208" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49947312" weight="0.32719395" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25568798" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25568798" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,7 +348,8 @@
     <MESSAGE value="完善信息静态页面完成" />
     <MESSAGE value="完善信息交互完成" />
     <MESSAGE value="实现自动登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现自动登录" />
+    <MESSAGE value="静态页面完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="静态页面完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -385,13 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -579,13 +603,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/main/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1975">
-          <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+        <state relative-caret-position="297">
+          <caret line="80" column="34" lean-forward="true" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#19#59#0" expanded="true" />
+            <element signature="e#753#806#0" />
+            <element signature="e#913#944#0" />
+            <element signature="e#1029#1156#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav-footer/nav-footer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#16#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
