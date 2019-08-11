@@ -1,8 +1,9 @@
 /* 个人中心页面的路由 */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Result, List, WhiteSpace, Button, Modal } from 'antd-mobile'
+import {Result, List, WhiteSpace, Button, Modal, WingBlank} from 'antd-mobile'
 import Cookies from 'js-cookie'
+import { resetUser } from '../../redux/actions'
 
 
 const Item = List.Item
@@ -20,7 +21,7 @@ const Brief = Item.Brief
                 text: '确认',
                 onPress: () => {
                     Cookies.remove('userid')
-                    console.log('退出成功')
+                    this.props.resetUser()
                 }
             }
         ])
@@ -29,7 +30,7 @@ const Brief = Item.Brief
         const { user } = this.props
        console.log(user)
        return (
-           <div>
+           <div  style={{ marginBottom: 50, marginTop: 50 }}>
                <Result img={ <img src={ require(`../../assets/images/${ user.header }.png`) } style={{ width: 50 }} alt= 'header' /> } title={ user.username } message={ user.company }  />
                <List renderHeader={() => '相关信息'} >
                     <Item multipleLine>
@@ -46,5 +47,5 @@ const Brief = Item.Brief
 }
 export default connect(
     state => ({ user: state.user }),
-    {  }
+    { resetUser }
 )(Personal)

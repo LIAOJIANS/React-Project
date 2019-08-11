@@ -8,6 +8,7 @@ import {
     ERROR_MSG,
     RECEIVE_USER,
     RESET_USER,
+    RECEIVE_USER_LIST
 } from './action-types'
 import { getredirectTo } from '../utils'
 
@@ -17,7 +18,7 @@ const initUser = {
     msg: '', // 提示信息
     redirectTo: '' // 需要自动重定向路由路径
 }
-
+// 用户信息
 function user(state = initUser, action) {
     switch (action.type) {
         case AUTH_SUCCESS:
@@ -35,7 +36,20 @@ function user(state = initUser, action) {
     }
 }
 
+// 存储用户列表数据
+const initUserList = []
+
+// 用户列表
+function userList(state=initUserList, action) {
+    switch (action.type) {
+        case RECEIVE_USER_LIST:
+            return action.data
+        default:
+            return state
+    }
+}
 
 export default combineReducers({
-    user
+    user,
+    userList
 })

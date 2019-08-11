@@ -3,19 +3,25 @@ import {
     ERROR_MSG,
     RECEIVE_USER,
     RESET_USER,
+    RECEIVE_USER_LIST
 } from './action-types'
 import {
     reqLogin,
     reqRegister,
     reqUpadataUser,
-    reqUser
+    reqUser,
+    reqUserList
 } from '../api/index'
 // 登录、注册
 const authSuccess = (user) => ({ type: AUTH_SUCCESS, data: user })
 const errorMsg = (msg) => ({ type: ERROR_MSG, data: msg })
 // 完善信息
 const receiveUser = (user) => ({ type: RECEIVE_USER, data: user })
-const resetUser = (msg) => ({ type: RESET_USER, data: msg })
+export const resetUser = (msg) => ({ type: RESET_USER, data: msg })
+
+// 接收用户列表
+const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList })
+
 
 // 异步注册
 export const register = (user) => {
@@ -71,6 +77,18 @@ export const userInfo = () => {
             dispatch(receiveUser(result.data))
         }else {
             dispatch(resetUser(result.msg))
+        }
+    }
+}
+// 异步获取用户列表
+export const getUserList = (type) => {
+
+    return async dispatch => {
+        // 发送请求
+        const response = await reqUserList(type)
+        const result = response.data
+        if (result.code === 0) {
+            dispatch(receiveUserList(result.data))
         }
     }
 }

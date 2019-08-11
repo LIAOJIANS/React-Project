@@ -9,3 +9,10 @@
     width: 100%;
     height: inherit!important;
 }
+.am-navbar-dark {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+

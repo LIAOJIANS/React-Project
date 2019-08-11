@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdef6e5c-691a-4ca0-8c46-0d3e7dca0bca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/user-list/user-list.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/header-select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-select/header-select.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像10.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像13.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像14.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像15.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像17.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像19.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-select/images/头像9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/头像9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/dashen/dashen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashen/dashen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/laoban/laoban.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/laoban/laoban.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/personal/personal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/personal/personal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/action-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action-types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,14 +25,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/main/main.jsx">
+        <entry file="file://$PROJECT_DIR$/src/containers/dashen/dashen.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+            <state relative-caret-position="375">
+              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#19#59#0" expanded="true" />
-                <element signature="e#757#1409#0" />
+                <element signature="e#14#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/laoban/laoban.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#14#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/user-list/user-list.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="16" column="69" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/personal/personal.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="350">
+              <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#16#56#0" expanded="true" />
@@ -68,33 +78,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="300">
+              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/laoban-info/laoban-info.jsx">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="44" column="56" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="56" />
+            <state relative-caret-position="162">
+              <caret line="42" column="17" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#16#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/dashen-info/dashen-info.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#16#56#0" expanded="true" />
+                <element signature="e#25#64#0" expanded="true" />
+                <element signature="n#!!block;n#user#0" />
               </folding>
             </state>
           </provider>
@@ -103,11 +101,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/redux/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+            <state relative-caret-position="387">
+              <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
               <folding>
+                <element signature="e#0#99#0" expanded="true" />
                 <element signature="e#508#841#0" />
                 <element signature="e#881#1183#0" />
+                <element signature="e#1226#1534#0" />
+                <element signature="e#1577#1861#0" />
               </folding>
             </state>
           </provider>
@@ -146,27 +147,29 @@
         <option value="$PROJECT_DIR$/src/utils/index.js" />
         <option value="$PROJECT_DIR$/src/containers/laoban-info/laoban-info.jsx" />
         <option value="$PROJECT_DIR$/src/containers/dashen-info/dashen-info.jsx" />
-        <option value="$PROJECT_DIR$/src/api/index.js" />
-        <option value="$PROJECT_DIR$/src/redux/action-types.js" />
-        <option value="$PROJECT_DIR$/src/redux/reducers.js" />
-        <option value="$PROJECT_DIR$/src/redux/actions.js" />
-        <option value="$PROJECT_DIR$/src/containers/laoban/laoban.jsx" />
-        <option value="$PROJECT_DIR$/src/containers/dashen/dashen.jsx" />
         <option value="$PROJECT_DIR$/src/containers/messages/messages.jsx" />
         <option value="$PROJECT_DIR$/src/components/not-found/not-found.jsx" />
         <option value="$PROJECT_DIR$/src/containers/main/main.jsx" />
         <option value="$PROJECT_DIR$/src/components/nav-footer/nav-footer.jsx" />
         <option value="$PROJECT_DIR$/src/components/header-select/header-select.jsx" />
+        <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/action-types.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers.js" />
+        <option value="$PROJECT_DIR$/src/components/usre-list/usre-list.jsx" />
+        <option value="$PROJECT_DIR$/src/redux/actions.js" />
+        <option value="$PROJECT_DIR$/src/containers/dashen/dashen.jsx" />
+        <option value="$PROJECT_DIR$/src/containers/laoban/laoban.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-list/user-list.jsx" />
         <option value="$PROJECT_DIR$/src/assets/css/index.css" />
         <option value="$PROJECT_DIR$/src/containers/personal/personal.jsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1048" />
-    <option name="y" value="225" />
-    <option name="width" value="1173" />
-    <option name="height" value="690" />
+    <option name="x" value="276" />
+    <option name="y" value="222" />
+    <option name="width" value="1265" />
+    <option name="height" value="927" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -198,12 +201,6 @@
               <item name="react-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,13 +227,7 @@
               <item name="react-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="laoban-info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,7 +299,7 @@
       <workItem from="1565419391866" duration="3845000" />
       <workItem from="1565427127227" duration="1345000" />
       <workItem from="1565500798295" duration="5007000" />
-      <workItem from="1565515934232" duration="3706000" />
+      <workItem from="1565515934232" duration="13088000" />
     </task>
     <task id="LOCAL-00001" summary="登录注册">
       <created>1565164005474</created>
@@ -380,11 +371,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565507263999</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="退出登录功能完成">
+      <created>1565519663678</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1565519663678</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58654000" />
+    <option name="totallyTimeSpent" value="68036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,7 +400,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49947312" weight="0.32683983" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49947312" weight="0.3261105" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25568798" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -423,7 +421,8 @@
     <MESSAGE value="实现自动登录" />
     <MESSAGE value="静态页面完成" />
     <MESSAGE value="Footer组件OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Footer组件OK" />
+    <MESSAGE value="退出登录功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="退出登录功能完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -531,31 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/action-types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/laoban/laoban.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#14#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/login/login.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="587">
@@ -573,17 +547,6 @@
           <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/dashen/dashen.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#14#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -616,6 +579,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header-select/header-select.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#15#55#0" expanded="true" />
+            <element signature="e#210#460#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/action-types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -627,15 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header-select/header-select.jsx">
+    <entry file="file://$PROJECT_DIR$/src/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#15#55#0" expanded="true" />
-            <element signature="e#210#460#0" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -650,32 +627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-          <folding>
-            <element signature="e#508#841#0" />
-            <element signature="e#881#1183#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="24" column="78" lean-forward="true" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#25#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/dashen-info/dashen-info.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="1150">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#16#56#0" expanded="true" />
@@ -685,27 +640,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/main/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        <state relative-caret-position="75">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#19#59#0" expanded="true" />
             <element signature="e#757#1409#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#99#0" expanded="true" />
+            <element signature="e#508#841#0" />
+            <element signature="e#881#1183#0" />
+            <element signature="e#1226#1534#0" />
+            <element signature="e#1577#1861#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#25#64#0" expanded="true" />
+            <element signature="n#!!block;n#user#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="300">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/dashen/dashen.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#14#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/laoban/laoban.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#14#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-list/user-list.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" column="69" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/personal/personal.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="350">
+          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#16#56#0" expanded="true" />
