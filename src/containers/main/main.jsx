@@ -5,13 +5,50 @@ import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Cookies from 'js-cookie'
+import { NavBar } from 'antd-mobile'
 
 import DaShenInfo from '../dashen-info/dashen-info'
 import LaoBanInfo from '../laoban-info/laoban-info'
+import Laoban from '../laoban/laoban'
+import Dashen from '../dashen/dashen'
+import Messages from '../messages/messages'
+import Personal from '../personal/personal'
+import NotFound from '../../components/not-found/not-found'
+
 import { getredirectTo } from '../../utils'
 import { userInfo } from '../../redux/actions'
 
  class Main extends Component {
+    navList = [
+        {
+            path: '/laoban',
+            title: '老板列表',
+            component: Laoban,
+            icon: 'laoban',
+            text: '老板'
+        },
+        {
+            path: '/dashen',
+            title: '大神列表',
+            component: Dashen,
+            icon: 'dashen',
+            text: '大神'
+        },
+        {
+            path: '/message',
+            title: '消息列表',
+            component: Messages,
+            icon: 'message',
+            text: '消息'
+        },
+        {
+            path: '/personal',
+            title: '个人中心',
+            component: Personal,
+            icon: 'personal',
+            text: '个人'
+        }
+    ]
     componentDidMount() {
         const userid = Cookies.get('userid')
         const { _id } = this.props.user
@@ -39,12 +76,24 @@ import { userInfo } from '../../redux/actions'
               return <Redirect to={ path } />
           }
       }
+      // 获取路由消息数据
+          const { navList } = this
+         // 获取当前路由地址
+         const path = this.props.location.pathname
+         // 查找路由数据匹配路由
+          const isShow =  navList.find( nav => path === nav.path )
        return (
            <div>
+               { isShow ? <NavBar>{ isShow.title }</NavBar> : null }
                <Switch>
+                   {
+                       navList.map( (item, index) =>  <Route key={ index } path={ item.path } component={ item.component }></Route> )
+                   }
                    <Route path='/dasheninfo' component={ DaShenInfo }></Route>
                    <Route path='/laobaninfo' component={ LaoBanInfo }></Route>
+                   <Route component={ NotFound } />
                </Switch>
+               {/*{ isShow ? <NavBar>{ isShow.title }</NavBar> : null }*/}
            </div>
        )
    }
