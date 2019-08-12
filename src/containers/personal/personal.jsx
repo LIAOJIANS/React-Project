@@ -1,7 +1,7 @@
 /* 个人中心页面的路由 */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {Result, List, WhiteSpace, Button, Modal, WingBlank} from 'antd-mobile'
+import {Result, List, WhiteSpace, Button, Modal} from 'antd-mobile'
 import Cookies from 'js-cookie'
 import { resetUser } from '../../redux/actions'
 

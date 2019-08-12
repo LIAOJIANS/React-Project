@@ -15,6 +15,7 @@ import Messages from '../messages/messages'
 import Personal from '../personal/personal'
 import NotFound from '../../components/not-found/not-found'
 import NavFooter from '../../components/nav-footer/nav-footer'
+import Chat from '../chat/chat'
 
 import { getredirectTo } from '../../utils'
 import { userInfo } from '../../redux/actions'
@@ -100,6 +101,8 @@ import { userInfo } from '../../redux/actions'
                    }
                    <Route path='/dasheninfo' component={ DaShenInfo }></Route>
                    <Route path='/laobaninfo' component={ LaoBanInfo }></Route>
+
+                   <Route path='/chat/:userid' component={ Chat }></Route>
                    <Route component={ NotFound } />
                </Switch>
                { isShow ? <NavFooter navList={ navList } /> : null }
