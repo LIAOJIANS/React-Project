@@ -1,3 +1,5 @@
+// 引入客户端 io
+import io from 'socket.io-client'
 import {
     AUTH_SUCCESS,
     ERROR_MSG,
@@ -90,5 +92,26 @@ export const getUserList = (type) => {
         if (result.code === 0) {
             dispatch(receiveUserList(result.data))
         }
+    }
+}
+
+function initIO() {
+    if(!io.socket) {
+        // 连接服务器, 得到代表连接的 socket 对象
+        io.socket = io('ws://localhost:4000')
+        // 绑定'receiveMessage'的监听, 来接收服务器发送的消息
+        io.socket.on('receiveMsg', function (chatMsg) {
+            console.log('浏览器端接收到消息:', chatMsg)
+        })
+    }
+}
+// 异步发送消息
+export const sendMsg = ({ from, to, content }) => {
+
+    return dispatch => {
+        console.log('返送消息', { from, to, content })
+        initIO()
+        // 发消息
+        io.socket.emit('sendMsg', { from, to, content })
     }
 }
