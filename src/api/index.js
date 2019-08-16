@@ -15,3 +15,9 @@ export const reqUser = () => ajax('/user')
 
 // 根据用户类型获取用户列表
 export const reqUserList = (type) => ajax('/userlist', { type })
+
+// 获取聊天记录列表
+export const reqMsgList = () => ajax('/msglist')
+
+// 标记信息已读
+export const reqReadMsg = (from) => ajax('/readmsg', from, 'POST')

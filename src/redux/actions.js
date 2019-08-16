@@ -5,14 +5,18 @@ import {
     ERROR_MSG,
     RECEIVE_USER,
     RESET_USER,
-    RECEIVE_USER_LIST
+    RECEIVE_USER_LIST,
+    RECEIVE_MSG_LIST,
+    RECEIVE_MSG
 } from './action-types'
 import {
     reqLogin,
     reqRegister,
     reqUpadataUser,
     reqUser,
-    reqUserList
+    reqUserList,
+    reqMsgList,
+    reqReadMsg
 } from '../api/index'
 // 登录、注册
 const authSuccess = (user) => ({ type: AUTH_SUCCESS, data: user })
@@ -20,9 +24,10 @@ const errorMsg = (msg) => ({ type: ERROR_MSG, data: msg })
 // 完善信息
 const receiveUser = (user) => ({ type: RECEIVE_USER, data: user })
 export const resetUser = (msg) => ({ type: RESET_USER, data: msg })
-
 // 接收用户列表
-const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList })
+export const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList })
+// 接收多条聊天记录
+export const receiveMsgList = ({ users, chatMsgs }) => ({ type: RECEIVE_MSG_LIST, data: { users, chatMsgs } })
 
 
 // 异步注册
@@ -34,6 +39,7 @@ export const register = (user) => {
         const result = response.data
         console.log(result)
         if (result.code === 0) { // 成功
+            getMsgList(dispatch)
             dispatch(authSuccess(result.data))
         } else { // 失败
             dispatch(errorMsg(result.msg))
@@ -48,6 +54,7 @@ export const login = (user) => {
         const response = await reqLogin(user)
         const result = response.data
         if (result.code === 0) { // 成功
+            getMsgList(dispatch)
             dispatch(authSuccess(result.data))
         } else { // 失败
             dispatch(errorMsg(result.msg))
@@ -90,11 +97,12 @@ export const getUserList = (type) => {
         const response = await reqUserList(type)
         const result = response.data
         if (result.code === 0) {
+            getMsgList(dispatch)
             dispatch(receiveUserList(result.data))
         }
     }
 }
-
+// socket的监听配置
 function initIO() {
     if(!io.socket) {
         // 连接服务器, 得到代表连接的 socket 对象
@@ -110,8 +118,17 @@ export const sendMsg = ({ from, to, content }) => {
 
     return dispatch => {
         console.log('返送消息', { from, to, content })
-        initIO()
         // 发消息
         io.socket.emit('sendMsg', { from, to, content })
+    }
+}
+// 异步获取聊天信息列表
+async function getMsgList(dispatch) {
+    initIO()
+    const response = await reqMsgList()
+    const result = response.data
+    if(result.code === 0) {
+        const { users, chatMsgs } = result.data
+        dispatch(receiveMsgList({ users, chatMsgs } ))
     }
 }
