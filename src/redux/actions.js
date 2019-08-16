@@ -25,10 +25,11 @@ const errorMsg = (msg) => ({ type: ERROR_MSG, data: msg })
 const receiveUser = (user) => ({ type: RECEIVE_USER, data: user })
 export const resetUser = (msg) => ({ type: RESET_USER, data: msg })
 // 接收用户列表
-export const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList })
+const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList })
 // 接收多条聊天记录
-export const receiveMsgList = ({ users, chatMsgs }) => ({ type: RECEIVE_MSG_LIST, data: { users, chatMsgs } })
-
+const receiveMsgList = ({ users, chatMsgs }) => ({ type: RECEIVE_MSG_LIST, data: { users, chatMsgs } })
+// 接收一条聊天记录
+const receiveMsg = (chatMsg) => ({ type: RECEIVE_MSG, data: chatMsg })
 
 // 异步注册
 export const register = (user) => {
@@ -39,7 +40,7 @@ export const register = (user) => {
         const result = response.data
         console.log(result)
         if (result.code === 0) { // 成功
-            getMsgList(dispatch)
+            getMsgList(dispatch, result.data._id)
             dispatch(authSuccess(result.data))
         } else { // 失败
             dispatch(errorMsg(result.msg))
@@ -54,7 +55,7 @@ export const login = (user) => {
         const response = await reqLogin(user)
         const result = response.data
         if (result.code === 0) { // 成功
-            getMsgList(dispatch)
+            getMsgList(dispatch, result.data._id)
             dispatch(authSuccess(result.data))
         } else { // 失败
             dispatch(errorMsg(result.msg))
@@ -83,6 +84,7 @@ export const userInfo = () => {
         const response = await reqUser()
         const result = response.data
         if(result.code === 0) {
+            getMsgList(dispatch, result.data._id)
             dispatch(receiveUser(result.data))
         }else {
             dispatch(resetUser(result.msg))
@@ -97,19 +99,20 @@ export const getUserList = (type) => {
         const response = await reqUserList(type)
         const result = response.data
         if (result.code === 0) {
-            getMsgList(dispatch)
             dispatch(receiveUserList(result.data))
         }
     }
 }
 // socket的监听配置
-function initIO() {
+function initIO(dispatch, userid) {
     if(!io.socket) {
         // 连接服务器, 得到代表连接的 socket 对象
         io.socket = io('ws://localhost:4000')
         // 绑定'receiveMessage'的监听, 来接收服务器发送的消息
         io.socket.on('receiveMsg', function (chatMsg) {
-            console.log('浏览器端接收到消息:', chatMsg)
+            if(userid === chatMsg.from || userid === chatMsg.to) {
+                dispatch(receiveMsg(chatMsg, userid))
+            }
         })
     }
 }
@@ -123,8 +126,8 @@ export const sendMsg = ({ from, to, content }) => {
     }
 }
 // 异步获取聊天信息列表
-async function getMsgList(dispatch) {
-    initIO()
+async function getMsgList(dispatch, userid) {
+    initIO(dispatch, userid)
     const response = await reqMsgList()
     const result = response.data
     if(result.code === 0) {

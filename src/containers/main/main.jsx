@@ -24,17 +24,17 @@ import { userInfo } from '../../redux/actions'
     navList = [
         {
             path: '/laoban',
-            title: '老板列表',
+            title: '大神列表',
             component: Laoban,
-            icon: 'laoban',
-            text: '老板'
+            icon: 'dashen',
+            text: '大神'
         },
         {
             path: '/dashen',
-            title: '大神列表',
+            title: '老板列表',
             component: Dashen,
-            icon: 'dashen',
-            text: '大神'
+            icon: 'laoban',
+            text: '老板'
         },
         {
             path: '/message',

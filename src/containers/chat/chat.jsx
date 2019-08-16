@@ -31,6 +31,7 @@ class Chat extends Component {
        const meId = user._id
        // 如果还没从后台拿到数据
        if(!users[meId]) {
+           console.log(users[meId])
            return null
        }
        // 获取对方的ID
@@ -41,7 +42,7 @@ class Chat extends Component {
        // 获取对方的头像信息
        const targetHeader = users[targetId].header
        // 添加头像
-       const targetIcon = require(`../../assets/images/${ targetHeader }.png`)
+       const targetIcon = targetHeader ? require(`../../assets/images/${ targetHeader }.png`) : null
        return (
            <div id='chat-page' style={{ marginBottom: 50, marginTop: 50 }}>
                <NavBar>aaa</NavBar>
