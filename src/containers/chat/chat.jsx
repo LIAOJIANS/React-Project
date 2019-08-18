@@ -1,13 +1,42 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NavBar, InputItem, List } from 'antd-mobile'
+import { NavBar, InputItem, List, Grid, Icon } from 'antd-mobile'
 import { sendMsg } from '../../redux/actions'
 
 const Item = List.Item
 
 class Chat extends Component {
     state = {
-        content: '' // 发送内容
+        content: '', // 发送内容
+        isShow: false, // 是否显示
+    }
+    componentWillMount() {
+        const emjop = ['😃', '😁', '😆', '😅', '😇', '😍', '😃', '😁', '😆', '😅', '😇', '😍',
+            '😃', '😁', '😆', '😅', '😇', '😍', '😃', '😁', '😆', '😅', '😇', '😍',
+            '😃', '😁', '😆', '😅', '😇', '😍', '😃', '😁', '😆', '😅', '😇', '😍',
+            '😃', '😁', '😆', '😅', '😇', '😍', '😃', '😁', '😆', '😅', '😇', '😍',
+        ]
+        this.emjop = emjop.map(item => ({ text: item }))
+    }
+    toggleShow = () => {
+        const isShow = !this.state.isShow
+        this.setState({ isShow })
+        if(isShow) {
+            // 异步手动派发resize事件,解决表情列表显示的bug
+            setTimeout(() => {
+                window.dispatchEvent(new Event('resize'))
+            }, 0)
+        }
+    }
+    componentDidMount() {
+        // 初始显示列表
+        window.scrollTo(0, document.body.scrollHeight)
+
+    }
+
+    componentDidUpdate () {
+        // 更新显示列表
+        window.scrollTo(0, document.body.scrollHeight)
     }
     handleSend = () => {
         // 获取用户ID
@@ -20,7 +49,7 @@ class Chat extends Component {
             // 发送请求
             this.props.sendMsg({ from, to, content })
         }
-        this.setState({ content: '' })
+        this.setState({ content: '', isShow: false })
     }
    render() {
        // 获取当前用户信息
@@ -45,7 +74,9 @@ class Chat extends Component {
        const targetIcon = targetHeader ? require(`../../assets/images/${ targetHeader }.png`) : null
        return (
            <div id='chat-page' style={{ marginBottom: 50, marginTop: 50 }}>
-               <NavBar>aaa</NavBar>
+               <NavBar icon={<Icon type='left'/>} className='sticky-header' onLeftClick={()=> this.props.history.goBack()}>
+                   { users[targetId].username }
+               </NavBar>
                <List>
                    {
                        msgs.map( msg => {
@@ -66,8 +97,24 @@ class Chat extends Component {
                    }
                </List>
                <div className='am-tab-bar'>
-                   <InputItem palceholder='请输入' value={ this.state.content } onChange={ val => this.setState({ content: val })} extra={ <span onClick={ this.handleSend } >发送</span> }>
+                   <InputItem palceholder='请输入' value={ this.state.content } onChange={ val => this.setState({ content: val })} onFocus={() => this.setState({isShow: false})} extra={
+                       <span>
+                            <span onClick={ this.toggleShow } style={{marginRight:5}}>😊</span>
+                            <span onClick={ this.handleSend } >发送</span>
+                       </span>
+                   }>
                    </InputItem>
+                   { this.state.isShow ? (
+                       <Grid
+                           data={ this.emjop }
+                           columnNum={ 8 }
+                           carouselMaxRow={4}
+                           isCarousel={ true }
+                           onClick={(item) => {
+                               this.setState({ content: this.state.content + item.text })
+                           }}
+                       />
+                   ) : null}
                </div>
            </div>
        )
