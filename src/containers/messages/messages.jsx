@@ -54,16 +54,18 @@ function getLastMsgs(chatMsgs, userid) {
                {
                    lastMsgs.map(msg => {
                        // 得到目标用户的id
-                       const targetUserId = msg.to===user._id ? msg.from : msg.to
+                       const targetUserId = msg.to === user._id ? msg.from : msg.to
                        // 得到目标用户的信息
                        const targetUser = users[targetUserId]
+                       console.log(targetUser)
+                       console.log(1)
                        return (
                            <Item
                                key={ msg._id }
                                extra={ <Badge text={ msg.unReadCount } /> }
-                               thumb={ targetUser.header ? require(`../../assets/images/${ targetUser.header }.png`) : null}
+                               thumb={ targetUser.header ? require(`../../assets/images/${ targetUser.header }.png`) : null }
                                arrow='horizontal'
-                               onClick={ () => this.props.history.push(`/chat/${targetUserId}`) }
+                               onClick={ () => this.props.history.push(`/chat/${ targetUserId }`) }
                            >
                                { msg.content }
                                <Brief>{ targetUser.username }</Brief>

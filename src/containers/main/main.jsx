@@ -67,7 +67,7 @@ import { userInfo } from '../../redux/actions'
            return <Redirect to='/login' />
        }
        //  拿出头部信息，跟用户类型
-       const { user } = this.props
+       const { user, unReadCount } = this.props
        // 判断有cookie没id1的情况
       if(!user._id) {
           return null
@@ -105,12 +105,12 @@ import { userInfo } from '../../redux/actions'
                    <Route path='/chat/:userid' component={ Chat }></Route>
                    <Route component={ NotFound } />
                </Switch>
-               { isShow ? <NavFooter navList={ navList } /> : null }
+               { isShow ? <NavFooter navList={ navList } unReadCount={ unReadCount } /> : null }
            </div>
        )
    }
 }
 export default connect(
-    state => ({ user: state.user }),
+    state => ({ user: state.user, unReadCount: state.chat.unReadCount }),
     {userInfo}
 )(Main)

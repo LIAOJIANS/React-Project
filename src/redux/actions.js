@@ -27,9 +27,9 @@ export const resetUser = (msg) => ({ type: RESET_USER, data: msg })
 // 接收用户列表
 const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList })
 // 接收多条聊天记录
-const receiveMsgList = ({ users, chatMsgs }) => ({ type: RECEIVE_MSG_LIST, data: { users, chatMsgs } })
+const receiveMsgList = ({ users, chatMsgs, userid }) => ({ type: RECEIVE_MSG_LIST, data: { users, chatMsgs, userid } })
 // 接收一条聊天记录
-const receiveMsg = (chatMsg) => ({ type: RECEIVE_MSG, data: chatMsg })
+const receiveMsg = ( chatMsg, userid ) => ({ type: RECEIVE_MSG, data: { chatMsg, userid } })
 
 // 异步注册
 export const register = (user) => {
@@ -132,6 +132,6 @@ async function getMsgList(dispatch, userid) {
     const result = response.data
     if(result.code === 0) {
         const { users, chatMsgs } = result.data
-        dispatch(receiveMsgList({ users, chatMsgs } ))
+        dispatch(receiveMsgList({ users, chatMsgs, userid } ))
     }
 }

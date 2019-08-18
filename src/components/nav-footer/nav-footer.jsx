@@ -8,10 +8,11 @@ import { withRouter } from 'react-router-dom'
 const Item = TabBar.Item
  class NavFooter extends Component {
     static propTypes = {
-        navList: PropTypes.array.isRequired
+        navList: PropTypes.array.isRequired,
+        unReadCount: PropTypes.number.isRequired
     }
    render() {
-        let { navList } = this.props
+        let { navList, unReadCount } = this.props
        // 过滤类型
        navList = navList.filter(nav => !nav.hide)
        const path = this.props.location.pathname
@@ -21,6 +22,7 @@ const Item = TabBar.Item
                  {
                      navList.map(nav => (
                          <Item key={ nav.path }
+                               badge={ nav.path === '/message' ? unReadCount : 0 }
                                title={ nav.text }
                                icon={ { uri: require(`./nav/${ nav.icon }.png`) } }
                                selectedIcon={{ uri: require(`./nav/${ nav.icon }-selected.png`) }}
