@@ -20,4 +20,4 @@ export const reqUserList = (type) => ajax('/userlist', { type })
 export const reqMsgList = () => ajax('/msglist')
 
 // 标记信息已读
-export const reqReadMsg = (from) => ajax('/readmsg', from, 'POST')
+export const reqReadMsg = (from) => ajax('/readmsg', { from }, 'POST')

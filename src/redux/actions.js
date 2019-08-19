@@ -7,7 +7,8 @@ import {
     RESET_USER,
     RECEIVE_USER_LIST,
     RECEIVE_MSG_LIST,
-    RECEIVE_MSG
+    RECEIVE_MSG,
+    RECEIVE_READ_MSG
 } from './action-types'
 import {
     reqLogin,
@@ -30,6 +31,8 @@ const receiveUserList = (userList) => ({ type: RECEIVE_USER_LIST, data: userList
 const receiveMsgList = ({ users, chatMsgs, userid }) => ({ type: RECEIVE_MSG_LIST, data: { users, chatMsgs, userid } })
 // 接收一条聊天记录
 const receiveMsg = ( chatMsg, userid ) => ({ type: RECEIVE_MSG, data: { chatMsg, userid } })
+// 读取了消息
+const readMsg = ({ count, targetId, meId }) => ({ type: RECEIVE_READ_MSG, data: { count, targetId, meId } })
 
 // 异步注册
 export const register = (user) => {
@@ -133,5 +136,17 @@ async function getMsgList(dispatch, userid) {
     if(result.code === 0) {
         const { users, chatMsgs } = result.data
         dispatch(receiveMsgList({ users, chatMsgs, userid } ))
+    }
+}
+// 异步更新未读数量
+export const updataReadCount = (targetId, meId) => {
+
+    return async dispatch => {
+        const response = await reqReadMsg(targetId)
+        const result = response.data
+        if (result.code === 0) {
+            const count = result.data
+            dispatch(readMsg({ count, targetId, meId }))
+        }
     }
 }
