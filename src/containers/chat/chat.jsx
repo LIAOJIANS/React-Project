@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { NavBar, InputItem, List, Grid, Icon } from 'antd-mobile'
+import QueueAnim from 'rc-queue-anim';
 import { sendMsg, updataReadCount } from '../../redux/actions'
 
 const Item = List.Item
@@ -38,7 +39,7 @@ class Chat extends Component {
         window.scrollTo(0, document.body.scrollHeight)
     }
 
-    componentDidCatch(error, errorInfo) {
+    componentWillUnmount() {
         // 获取对方的ID
         const targetId = this.props.match.params.userid
         // 获取我的ID
@@ -87,23 +88,25 @@ class Chat extends Component {
                    { users[targetId].username }
                </NavBar>
                <List>
-                   {
-                       msgs.map( msg => {
-                           if(targetId === msg.from) { // 对方发给我的
-                              return (
-                                  <Item key={ msg._id } thumb={ targetIcon }>
-                                      { msg.content }
-                                  </Item>
-                              )
-                           } else {
-                                return (
-                                    <Item  key={ msg._id } extra='我' className='chat-me' >
-                                        { msg.content }
-                                    </Item>
-                                )
-                           }
-                       })
-                   }
+                   <QueueAnim type='left' delay={ 100 }>
+                       {
+                           msgs.map( msg => {
+                               if(targetId === msg.from) { // 对方发给我的
+                                   return (
+                                       <Item key={ msg._id } thumb={ targetIcon }>
+                                           { msg.content }
+                                       </Item>
+                                   )
+                               } else {
+                                   return (
+                                       <Item  key={ msg._id } extra='我' className='chat-me' >
+                                           { msg.content }
+                                       </Item>
+                                   )
+                               }
+                           })
+                       }
+                   </QueueAnim>
                </List>
                <div className='am-tab-bar'>
                    <InputItem palceholder='请输入' value={ this.state.content } onChange={ val => this.setState({ content: val })} onFocus={() => this.setState({isShow: false})} extra={
