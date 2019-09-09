@@ -109,7 +109,7 @@ class Chat extends Component {
                    </QueueAnim>
                </List>
                <div className='am-tab-bar'>
-                   <InputItem palceholder='请输入' value={ this.state.content } onChange={ val => this.setState({ content: val })} onFocus={() => this.setState({isShow: false})} extra={
+                   <InputItem palceholder='请输入' value={ this.state.content } onChange={ val => this.setState({ content: val })} onFocus={() => this.setState({ isShow: false })} extra={
                        <span>
                             <span onClick={ this.toggleShow } style={{marginRight:5}}>😊</span>
                             <span onClick={ this.handleSend } >发送</span>
@@ -120,7 +120,7 @@ class Chat extends Component {
                        <Grid
                            data={ this.emjop }
                            columnNum={ 8 }
-                           carouselMaxRow={4}
+                           carouselMaxRow={ 4 }
                            isCarousel={ true }
                            onClick={(item) => {
                                this.setState({ content: this.state.content + item.text })
