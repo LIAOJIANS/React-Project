@@ -15,7 +15,7 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.5.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
